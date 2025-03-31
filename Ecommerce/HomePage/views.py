@@ -4,3 +4,6 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, "Pages/Homepage.html")
+
+def product(request):
+    return render(request,"Pages/Products.html")
