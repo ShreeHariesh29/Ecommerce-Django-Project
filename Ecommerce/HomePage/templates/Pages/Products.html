@@ -2,6 +2,22 @@
 
 {% block productPage %}
 <div>
-    <h1>Product Page</h1>
+    <h1>Products of the deals</h1>
+    <div class="product-session">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image">
+                image
+            </div>
+            <div class="product-details">
+                <p>{{product.name}}</p>
+                <p>{{product.description}}</p>
+                <p>{{product.quantity}}</p>
+                <p>{{product.price}}</p>
+                <div class="product-card-viewbutton"><a href="Product/Selected-Product/{{product.id}}"><button>View Product..</button></a></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
