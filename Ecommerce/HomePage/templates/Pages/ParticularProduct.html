@@ -1,7 +1,27 @@
 {% extends 'Pages/Baselayout.html' %}
 
 {% block ParticularPage %}
-<h1>Particular Product Page </h1>
-<h1>id = {{Product_id}} </h1>
-<p>{{Product_detail}}</p>
+<h1>Your Product Details</h1>
+<div class="product-detail-session">
+    <div class="product-detail-session-1">
+        <p>{{Product_detail.name}}</p>
+        <img src="" alt="">
+    </div>
+    <div class="product-detail-session-2">
+        <h1>{{Product_detail.name}}</h1>
+        <p>About the Product:</p>
+        <p>{{Product_detail.description}}</p>
+        <p>{{Product_detail.quantity}}</p>
+        <p>{{Product_detail.price}}</p>
+        <a href="">
+            <button>Buy Now</button>
+        </a>
+        <a href="">
+            <button>Add To Cart</button>
+        </a>
+    </div>
+</div>
+<!-- <h1>id = {{Product_id}} </h1>
+<p>{{Product_detail}}</p> -->
+
 {% endblock %}

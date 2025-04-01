@@ -38,10 +38,14 @@ def ParticularProduct(request , Product_id):
 
     id = Product_id
     for x in products:
-        for y in x.keys():
-            if y == "id":
-                if x[y] == id:
-                    product_detail = x
+        if x["id"] == id:
+            product_detail = x
+
+        # for y in x.keys():
+        #     if y == "id":
+        #         if x[y] == id:
+        #             product_detail = x
+        
     return render(request, "Pages/ParticularProduct.html", {"Product_id":id, "Product_detail":product_detail})
 
 def Addtocart(request):
